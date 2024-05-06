@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace JoemagsApps\ZimPhoneUtils;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use JoemagsApps\ZimPhoneUtils\Commands\ZimPhoneUtilsCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class ZimPhoneUtilsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('zim-phone-utils')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_zim-phone-utils_table')
+            ->hasCommand(ZimPhoneUtilsCommand::class);
     }
 }
