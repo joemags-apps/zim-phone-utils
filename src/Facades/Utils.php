@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \JoemagsApps\ZimPhoneUtils\ZimPhoneUtils
  */
-class ZimPhoneUtils extends Facade
+class Utils extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \JoemagsApps\ZimPhoneUtils\ZimPhoneUtils::class;
+        return \JoemagsApps\ZimPhoneUtils\Utils::class;
     }
 }

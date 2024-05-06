@@ -2,9 +2,14 @@
     "name": "joemags-apps/zim-phone-utils",
     "description": "A Laravel package for working with phone numbers in the Zimbabwean context.",
     "keywords": [
-        "Joe Munapo",
         "laravel",
-        "zim-phone-utils"
+        "phone",
+        "validation",
+        "zimbabwe",
+        "utilities",
+        "mobile",
+        "carrier",
+        "country-code"
     ],
     "homepage": "https://github.com/joemags-apps/zim-phone-utils",
     "license": "MIT",
@@ -17,8 +22,9 @@
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0"
+        "giggsey/libphonenumber-for-php": "^8.13",
+        "illuminate/contracts": "^10.0||^11.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -30,8 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JoemagsApps\\ZimPhoneUtils\\": "src/",
-            "JoemagsApps\\ZimPhoneUtils\\Database\\Factories\\": "database/factories/"
+            "JoemagsApps\\ZimPhoneUtils\\": "src/"
         }
     },
     "autoload-dev": {
@@ -71,7 +76,7 @@
                 "JoemagsApps\\ZimPhoneUtils\\ZimPhoneUtilsServiceProvider"
             ],
             "aliases": {
-                "ZimPhoneUtils": "JoemagsApps\\ZimPhoneUtils\\Facades\\ZimPhoneUtils"
+                "Utils": "JoemagsApps\\ZimPhoneUtils\\Facades\\Utils"
             }
         }
     },

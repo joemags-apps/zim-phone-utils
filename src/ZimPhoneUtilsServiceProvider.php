@@ -4,7 +4,6 @@ namespace JoemagsApps\ZimPhoneUtils;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use JoemagsApps\ZimPhoneUtils\Commands\ZimPhoneUtilsCommand;
 
 class ZimPhoneUtilsServiceProvider extends PackageServiceProvider
 {
@@ -17,9 +16,11 @@ class ZimPhoneUtilsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('zim-phone-utils')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_zim-phone-utils_table')
-            ->hasCommand(ZimPhoneUtilsCommand::class);
+            ->hasConfigFile();
+    }
+
+    public function bootingPackage()
+    {
+        CustomValidation::loadRules();
     }
 }
