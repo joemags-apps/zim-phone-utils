@@ -94,7 +94,9 @@ class Utils
         try {
             $phoneNumber = self::$phoneUtil->parse($phone, $defaultRegion);
             $format = $national ? PhoneNumberFormat::NATIONAL : PhoneNumberFormat::INTERNATIONAL;
-            return self::$phoneUtil->format($phoneNumber, $format);
+            $formatted = self::$phoneUtil->format($phoneNumber, $format);
+            $formatted = str_replace([' ', '-', '(', ')', '+'], '', $formatted);
+            return $formatted;
         } catch (\Exception $e) {
             return '';
         }

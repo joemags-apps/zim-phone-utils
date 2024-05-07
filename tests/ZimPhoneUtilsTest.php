@@ -4,13 +4,13 @@ use JoemagsApps\ZimPhoneUtils\Utils;
 use Illuminate\Support\Facades\Validator;
 
 test('it formats phone numbers in national format', function () {
-    expect(Utils::formatPhoneNumber('+263771234567'))->toBe('077 123 4567');
-    expect(Utils::formatPhoneNumber('+263712345678'))->toBe('071 234 5678');
+    expect(Utils::formatPhoneNumber('+263771234567'))->toBe('0771234567');
+    expect(Utils::formatPhoneNumber('+263712345678'))->toBe('0712345678');
 });
 
 test('it formats phone numbers in international format', function () {
-    expect(Utils::formatPhoneNumber('+263771234567', false))->toBe('+263 77 123 4567');
-    expect(Utils::formatPhoneNumber('+263712345678', false))->toBe('+263 71 234 5678');
+    expect(Utils::formatPhoneNumber('+263771234567', false))->toBe('263771234567');
+    expect(Utils::formatPhoneNumber('+263712345678', false))->toBe('263712345678');
 });
 
 test('it extracts country ISO codes from phone numbers', function () {
