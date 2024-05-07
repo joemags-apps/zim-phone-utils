@@ -23,18 +23,6 @@ You can install the package via composer:
 composer require joemags-apps/zim-phone-utils
 ```
 
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="zim-phone-utils-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="zim-phone-utils-views"
-```
-
 ## Usage
 
 ```php

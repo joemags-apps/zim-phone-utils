@@ -15,8 +15,7 @@ class ZimPhoneUtilsServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('zim-phone-utils')
-            ->hasConfigFile();
+            ->name('zim-phone-utils');
     }
 
     public function bootingPackage()
