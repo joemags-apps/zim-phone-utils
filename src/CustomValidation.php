@@ -11,7 +11,7 @@ class CustomValidation
         Validator::extend('carrier', function ($attribute, $value, $parameters, $validator) {
             $carrier = Utils::getPhoneCarrier($value);
             return in_array($carrier, $parameters);
-        }, 'The :attribute must be from one of the following carriers: :values.');
+        }, 'The :attribute must be from one of the following carriers: :value');
 
         Validator::extend('phone', function ($attribute, $value, $parameters, $validator) {
             try {
