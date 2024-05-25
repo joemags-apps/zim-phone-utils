@@ -1,7 +1,7 @@
 {
     "name": "joemags-apps/zim-phone-utils",
     "description": "A Laravel package for working with phone numbers in the Zimbabwean context.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "library",
     "keywords": [
         "laravel",
