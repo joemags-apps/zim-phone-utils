@@ -10,8 +10,13 @@ class CustomValidation
     {
         Validator::extend('carrier', function ($attribute, $value, $parameters, $validator) {
             $carrier = Utils::getPhoneCarrier($value);
-            return in_array($carrier, $parameters);
-        }, 'The :attribute must be from one of the following carriers: :value');
+            $carrier = strtolower($carrier);
+            $parameters = array_map('strtolower', $parameters);
+            if(in_array($carrier, $parameters)) return  true;
+            $carrier_str = implode(', ', $parameters);
+            $validator->addReplacer('carrier', fn() => "The mobile number must be a number from the following carriers: {$carrier_str}");
+            return false;
+        });
 
         Validator::extend('phone', function ($attribute, $value, $parameters, $validator) {
             try {
