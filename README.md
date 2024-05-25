@@ -51,7 +51,7 @@ $request->validate([
 ## Testing
 
 ```bash
-composer test
+composer test # Run tests
 ```
 
 ## Changelog
